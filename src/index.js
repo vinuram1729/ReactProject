@@ -1,17 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import ListItem  from './List/ListItem'
+const arr = ["one", "two", "three"]
+const disabled = true;
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const obj = {
+  backgroundColor:"green",
+  padding:"5px",
+  color:"white",
+  borderRadius:"2px",
+  fontWeight:"bold",
+  
+}
+const buttonStyle ={
+  padding:'10px'
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+}
+function myClick(){
+  alert('clicked')
+}
+// creating components
+
+// root.render(
+//   <div id="my-hello" className={disabled ? 'is-disabled':'is-enabled'}> Hello</div >
+// );
+// inline styling and array iteration
+// root.render(
+//   <div style={obj}> {arr.map(function(item){
+//     return <label key={item}><h1>{item}</h1></label>
+//   })}
+//   <button style ={buttonStyle}onClick={myClick}>Click</button>
+//   <br>
+// </br>
+
+//   </div >
+// );
+root.render (
+  <div>
+<ListItem />
+  </div>
+);
